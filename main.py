@@ -12,8 +12,8 @@ client = MongoClient("mongodb://localhost:27017")
 db = client.news_db
 collection = db.articles
 
-TELEGRAM_TOKEN = "7381862481:AAEr3B5jwuFBmVKdW0S_vZVhJED4nJH7hyc"
-CHANNEL_ID = "@weert123"
+TELEGRAM_TOKEN = "Token"
+CHANNEL_ID = "channel_id"
 bot = Bot(token=TELEGRAM_TOKEN)
 
 rss_feeds = {
@@ -45,7 +45,7 @@ Here is the article:
 {message}
 \"\"\""""
     try:
-        client = openai.OpenAI(api_key="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")
+        client = openai.OpenAI(api_key="Your_api_key")
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
